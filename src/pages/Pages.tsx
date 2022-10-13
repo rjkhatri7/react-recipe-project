@@ -8,7 +8,7 @@ import Searched from "./Searched";
 function Pages() {
   const location = useLocation();
   return (
-    <AnimatePresence exitBeforeEnter>
+    <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<Home />} />
         <Route path="/cuisine/:type" element={<Cuisine />} />
